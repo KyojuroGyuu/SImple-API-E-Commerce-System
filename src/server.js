@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-   return res.json("API is running")
+   return res.json({status: "API is running"})
 })
 
 app.use('/page', userRoutes, shopRoutes, orderRoutes);
